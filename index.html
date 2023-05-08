@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+    <title>Consulta de datos global</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="tabs">
+      <button class="tablink" onclick="openTab(event, 'informacion')">Información</button>
+      <button class="tablink" onclick="openTab(event, 'facturas')">Facturas</button>
+      <button class="tablink" onclick="openTab(event, 'contactos')">Contactos</button>
+      <button class="tablink" onclick="openTab(event, 'cotizaciones')">Cotizaciones</button>
+    </div>
+    
+    <div id="informacion" class="tabcontent">
+      <h2>Información del cliente</h2>
+        <p>Nombre: Juan Pérez</p>
+        <p>Teléfono: 555-1234</p>
+        <p>Correo electrónico: juan.perez@example.com</p>
+        <p>Dirección: Calle 123, Ciudad de México, México</p>
+    </div>
+    
+    <div id="facturas" class="tabcontent">
+      <h2>Facturas del cliente</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Número</th>
+            <th>Fecha</th>
+            <th>Monto</th>
+            <th>Detalle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>2022-01-01</td>
+            <td>1000.00</td>
+            <td></td><button onclick="showDetails('001')">Mostrar detalles</button></td>
+          </tr>
+
+      <div id="facturas-detalles" style="display:none;">
+        <p>Inserta aquí el detalle de las facturas del cliente</p>
+        <div id="detalle-factura">
+          <h3>Detalle de la Factura 001</h3>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Código</th>
+                      <th>Descripción</th>
+                      <th>Precio Unitario</th>
+                      <th>Cantidad</th>
+                      <th>Precio Total</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>001</td>
+                      <td>Descripción del artículo 1</td>
+                      <td>100.00</td>
+                      <td>5</td>
+                      <td>500.00</td>
+                  </tr>
+                  <tr>
+                      <td>002</td>
+                      <td>Descripción del artículo 2</td>
+                      <td>50.00</td>
+                      <td>10</td>
+                      <td>500.00</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      
+
+      </div>
+    </div>
+
+	</div>
+    
+    <div id="contactos" class="tabcontent">
+      <h2>Contactos del cliente</h2>
+      <p>Inserta aquí los contactos de teléfono del cliente</p>
+    </div>
+    
+    <div id="cotizaciones" class="tabcontent">
+      <h2>Cotizaciones enviadas al cliente</h2>
+      <p>Inserta aquí las cotizaciones enviadas al cliente</p>
+    </div>
+    <script type='module' src="./index.js" ></script>
+  </body>
+</html>
